@@ -1,0 +1,144 @@
+{{ define "main" }}
+
+<div class="container">
+  <div class="time-controls-container">
+    <div style="float: left; max-width: 120px; margin-right: 10px; min-height: 80px;">
+      <label for="timeInput">Time</label>
+
+      <input type="text" id="timeInput" class="form-control form-control-lg js-time-elapsed-input" autocomplete="off" style="text-align: right" title="Duration of the meeting" disabled="disabled" />
+    </div>
+
+    <div style="float: left; margin-right: 10px; min-height: 80px;">
+      <label>Controls</label><br />
+
+      <button class="btn btn-lg btn-secondary js-start-time" title="Start Timer">
+        <i data-feather="play" aria-hidden="true"></i>
+        <span class="d-none d-sm-inline-block">Start</span>
+      </button>
+      <button class="btn btn-lg btn-secondary js-stop-time" title="Stop Timer">
+        <i data-feather="pause" aria-hidden="true"></i>
+        <span class="d-none d-sm-inline-block">Pause</span>
+      </button>
+      <button class="btn btn-lg btn-secondary js-reset-time" title="Reset Timer">
+        <i data-feather="skip-back" aria-hidden="true"></i>
+        <span class="d-none d-sm-inline-block">Reset</span>
+      </button>
+    </div>
+
+    <div style="float: left; min-height: 80px;">
+      <label>Jump forward/back</label><br />
+
+      <button class="btn btn-lg btn-secondary js-add-time" data-amount="15" data-date-type="minutes"
+        title="Add 15 minutes">
+        <i data-feather="plus" aria-hidden="true"></i>
+      </button>
+      <button class="btn btn-lg btn-secondary js-remove-time" data-amount="15" data-date-type="minutes"
+        title="Subtract 15 minutes">
+        <i data-feather="minus" aria-hidden="true"></i>
+      </button>
+
+      <div class="dropdown" style="display: inline-block; margin-left: 4px;">
+        <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" title="Set the meeting duration to a specific time">
+          Set time to…
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+          <button type="button" class="dropdown-item js-set-time" data-amount="30" data-date-type="minutes">
+            30 minutes
+          </button>
+          <button type="button" class="dropdown-item js-set-time" data-amount="1" data-date-type="hours">
+            1 hour
+          </button>
+          <button type="button" class="dropdown-item js-set-time" data-amount="2" data-date-type="hours">
+            2 hours
+          </button>
+          <button type="button" class="dropdown-item js-set-time" data-amount="3" data-date-type="hours">
+            3 hours
+          </button>
+          <button type="button" class="dropdown-item js-set-time" data-amount="4" data-date-type="hours">
+            4 hours
+          </button>
+          <button type="button" class="dropdown-item js-set-time" data-amount="7.5" data-date-type="hours">
+            7.5 hours
+          </button>
+          <button type="button" class="dropdown-item js-set-time" data-amount="8" data-date-type="hours">
+            8 hours
+          </button>
+          <button type="button" class="dropdown-item js-set-time" data-amount="37.5" data-date-type="hours">
+            37.5 hours
+          </button>
+          <button type="button" class="dropdown-item js-set-time" data-amount="40" data-date-type="hours">
+            40 hours
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="clock-display-container" style="float:right;">
+      <label>Cost</label><br />
+
+      <div class="clock-display">
+        <span class="js-cost-display">0</span>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+<div class="add-chairs-container-box">
+  <div class="container">
+    <div class="add-chairs-container">
+      <div style="float:left; margin-right: 10px;">
+        <div class="dropdown">
+          <button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Options">
+            <i data-feather="settings" aria-hidden="true"></i>
+            <span class="sr-only">Options</span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <div class="js-settings-menu"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="float:left; margin-right: 10px;">
+        <select id="user-type" class="custom-select custom-select-lg js-user-type-select" style="" title="Choose a participant by salary classification"></select>
+      </div>
+
+      <div style="float:left; margin-right: 10px;">
+        <button type="button" class="btn btn-lg btn-secondary js-add-user" title="Add a participant to the meeting">
+          <i data-feather="user-plus" aria-hidden="true"></i>
+          <span class="d-none d-md-inline-block">Add Participant</span>
+        </button>
+      </div>
+
+      <div style="float:right;">
+        <button class="btn btn-lg btn-secondary js-reset" title="Clear all participants">
+          <span class="d-block d-sm-none"><i data-feather="x" aria-hidden="true"></i></span>
+          <span class="d-none d-sm-block">Clear</span>
+        </button>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- /.container -->
+</div>
+
+<div class="clearfix"></div>
+
+<div class="container">
+  <div class="chairs-map"></div>
+</div>
+
+<!-- <div id="home-jumbotron" class="jumbotron text-center">
+  {{ with.Content }}
+  <h1>{{ $.Page.Title }}</h1>
+  {{ . }}
+  {{ else }}
+  <h1>{{ .Site.Title }}</h1>
+  <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
+  {{ end }}
+</div> -->
+
+{{ end }}

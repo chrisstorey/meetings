@@ -1,0 +1,254 @@
+<style>
+  /* .container {
+  max-width: {{ .Site.Params.containerMaxWidth | default "700px" | safeCSS }};
+} */
+  #nav a {
+    font-weight: bold;
+    color: inherit;
+  }
+
+  #nav a.nav-link-active {
+    background-color: #212529;
+    color: #fff;
+  }
+
+  #nav-border {
+    border-bottom: 1px solid #212529;
+  }
+
+  #main {
+    margin-top: 1em;
+    margin-bottom: 4em;
+  }
+
+  #home-jumbotron {
+    background-color: inherit;
+  }
+
+  #footer .container {
+    padding: 1em 0;
+  }
+
+  #footer a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .font-125 {
+    font-size: 125%;
+  }
+
+  .tag-btn {
+    margin-bottom: 0.3em;
+  }
+
+  pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+  }
+
+  pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+  }
+
+  img,
+  iframe,
+  embed,
+  video,
+  audio {
+    max-width: 100%;
+  }
+
+  .btn-lg svg,
+  .dropdown-item svg {
+    margin-top: -0.2em;
+  }
+
+  button.dropdown-item.active-dropdown-item {
+    font-weight: bold;
+  }
+
+  .about-container {
+    color: #fff;
+  }
+
+  .about-container a,
+  .about-container a:link {
+    color: #8ac0fb;
+  }
+
+  .about-container a:hover,
+  .about-container a:active,
+  .about-container a:focus {
+    color: #69b1ff;
+  }
+
+  .empty-chairs-placeholder {
+    max-width: 750px;
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+
+  .empty-chairs-placeholder li {
+    margin-bottom: 0.6em;
+  }
+
+  /* Original styles, updated below */
+
+  .title-top h1 {
+    margin-top: 0;
+  }
+
+  .title-top span {
+    margin-top: 10px;
+    font-size: 18px;
+    display: block;
+  }
+
+  .time-controls-container {}
+
+  .clock-display {
+    font-size: 2.0rem;
+    margin-top: -0.1em;
+    font-weight: bold;
+  }
+
+  .clock-display-container {
+    text-align: right;
+  }
+
+  .add-chairs-container {
+    clear: both;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    padding: 10px 0px;
+  }
+
+  .add-chairs-container-box {
+    background-color: #ececec;
+  }
+
+  div.chairs-map {
+    padding: 10px 0;
+  }
+
+  div.chair {
+    width: 130px;
+    height: 105px;
+    border: 3px solid #555c62;
+    color: #393d41;
+    text-align: center;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    /* padding: 13px 5px; */
+    position: relative;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: .3rem;
+  }
+
+  div.chair .chair-label {
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    padding: 2px 4px;
+    width: 100%;
+    min-height: 45px;
+    background-color: rgba(255,255,255,0.8);
+  }
+
+  div.chair:hover .chair-label {
+    background-color: rgba(245,245,245,0.8);
+  }
+
+  div.chair .chair-label.chair-label-small {
+    font-size: 0.8rem;
+  }
+
+  div.chair:hover {
+    background-color: #f5f5f5;
+    border-color: #6c757d;
+  }
+
+  
+
+  /* Alternating icons */
+  div.chair .user-focused, div.chair .user-unfocused {
+    position:relative;
+    top: 11px;
+  }
+
+  div.chair .user-focused {
+    margin-left: 10px;
+  }
+
+  div.chair:hover .user-focused {
+    display: block;
+  }
+
+  div.chair:hover .user-unfocused {
+    display: none;
+  }
+
+  div.chair .user-focused {
+    display: none;
+  }
+
+  div.chair .user-unfocused {
+    display: block;
+  }
+
+  /* .js-start-time,
+  .js-stop-time {
+    width: 98px;
+  } */
+
+  @media (min-width: 1px) {
+
+    .js-user-type-select {
+      max-width: 110px;
+    }
+
+  }
+
+  @media (min-width: 480px) {
+
+    .js-user-type-select {
+      max-width: 150px;
+    }
+
+  }
+
+  @media (min-width: 768px) {
+
+    .js-user-type-select {
+      max-width: 230px;
+    }
+
+  }
+
+  @media (min-width: 992px) {
+
+    .js-user-type-select {
+      max-width: 300px;
+    }
+
+  }
+</style>
